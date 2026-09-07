@@ -1,0 +1,29 @@
+{
+  "dataset": "ppb",
+  "model": "RandomForest_ECFP_random",
+  "seed": 43,
+  "splitter": "random",
+  "featurizer": "ECFP",
+  "n_estimators": 200,
+  "train_time_sec": 3.565,
+  "sizes": {
+    "train": 1291,
+    "valid": 161,
+    "test": 162
+  },
+  "train": {
+    "rmse": 0.3398907569771732,
+    "mae": 0.21592427097613182,
+    "r2": 0.8844742733214841
+  },
+  "valid": {
+    "rmse": 0.7721934002084919,
+    "mae": 0.5461746660249758,
+    "r2": 0.18113231933064833
+  },
+  "test": {
+    "rmse": 0.7532917127545071,
+    "mae": 0.5075591438858598,
+    "r2": 0.26646345446842856
+  }
+}

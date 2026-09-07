@@ -1,0 +1,148 @@
+[2026-08-25 01:28:31] === START ChemBERTa+GCN PPB seeds 42,43,44 ===
+No normalization for SPS. Feature removed!
+No normalization for AvgIpc. Feature removed!
+No normalization for NumAmideBonds. Feature removed!
+No normalization for NumAtomStereoCenters. Feature removed!
+No normalization for NumBridgeheadAtoms. Feature removed!
+No normalization for NumHeterocycles. Feature removed!
+No normalization for NumSpiroAtoms. Feature removed!
+No normalization for NumUnspecifiedAtomStereoCenters. Feature removed!
+No normalization for Phi. Feature removed!
+Skipped loading some Tensorflow models, missing a dependency. No module named 'tensorflow'
+Skipped loading modules with pytorch-geometric dependency, missing a dependency. No module named 'dgl'
+Skipped loading modules with transformers dependency. No module named 'transformers.models.roberta.tokenization_roberta_fast'
+cannot import name 'Chemberta' from 'deepchem.models.torch_models' (/Users/pradyu/opt/miniconda3/envs/dc/lib/python3.10/site-packages/deepchem/models/torch_models/__init__.py)
+Skipped loading modules with pytorch-lightning dependency, missing a dependency. No module named 'lightning'
+Skipped loading some Jax models, missing a dependency. No module named 'jax'
+Skipped loading some PyTorch models, missing a dependency. No module named 'tensorflow'
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 17101.31it/s]
+[transformers] [1mRobertaModel LOAD REPORT[0m from: seyonec/ChemBERTa-zinc-base-v1
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+lm_head.dense.bias        | UNEXPECTED |  | 
+lm_head.layer_norm.bias   | UNEXPECTED |  | 
+lm_head.dense.weight      | UNEXPECTED |  | 
+lm_head.layer_norm.weight | UNEXPECTED |  | 
+lm_head.decoder.weight    | UNEXPECTED |  | 
+lm_head.decoder.bias      | UNEXPECTED |  | 
+lm_head.bias              | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[ppb] Multimodal ChemBERTa+GCN seed=42 n=1291/161/162 tasks=1 device=mps graph=3x128 drop=0.25
+  epochs 1-2: ChemBERTa frozen
+[ppb/fusion-gcn] seed=42 epoch 1/20 loss=0.9257 train_r2=0.1847 valid_r2=0.1107
+[ppb/fusion-gcn] seed=42 epoch 2/20 loss=0.7978 train_r2=0.3755 valid_r2=0.3096
+  epoch 3: ChemBERTa unfrozen (diff LR)
+[ppb/fusion-gcn] seed=42 epoch 3/20 loss=0.7253 train_r2=0.4590 valid_r2=0.3590
+[ppb/fusion-gcn] seed=42 epoch 4/20 loss=0.6017 train_r2=0.5963 valid_r2=0.3746
+[ppb/fusion-gcn] seed=42 epoch 5/20 loss=0.4912 train_r2=0.6193 valid_r2=0.3372
+[ppb/fusion-gcn] seed=42 epoch 6/20 loss=0.4515 train_r2=0.6193 valid_r2=0.2183
+[ppb/fusion-gcn] seed=42 epoch 7/20 loss=0.3707 train_r2=0.7670 valid_r2=0.3440
+[ppb/fusion-gcn] seed=42 epoch 8/20 loss=0.3326 train_r2=0.8013 valid_r2=0.3672
+[ppb/fusion-gcn] seed=42 epoch 9/20 loss=0.2897 train_r2=0.7714 valid_r2=0.2844
+[ppb/fusion-gcn] seed=42 epoch 10/20 loss=0.2668 train_r2=0.7910 valid_r2=0.3441
+[ppb/fusion-gcn] seed=42 epoch 11/20 loss=0.2387 train_r2=0.7657 valid_r2=0.4004
+[ppb/fusion-gcn] seed=42 epoch 12/20 loss=0.2253 train_r2=0.8633 valid_r2=0.4221
+[ppb/fusion-gcn] seed=42 epoch 13/20 loss=0.1947 train_r2=0.8657 valid_r2=0.4505
+[ppb/fusion-gcn] seed=42 epoch 14/20 loss=0.1766 train_r2=0.8384 valid_r2=0.2963
+[ppb/fusion-gcn] seed=42 epoch 15/20 loss=0.1771 train_r2=0.9065 valid_r2=0.3989
+[ppb/fusion-gcn] seed=42 epoch 16/20 loss=0.1751 train_r2=0.7232 valid_r2=0.2714
+[ppb/fusion-gcn] seed=42 epoch 17/20 loss=0.1586 train_r2=0.8945 valid_r2=0.3918
+[ppb/fusion-gcn] seed=42 epoch 18/20 loss=0.1533 train_r2=0.8927 valid_r2=0.3890
+[ppb/fusion-gcn] seed=42 epoch 19/20 loss=0.1469 train_r2=0.9127 valid_r2=0.4121
+[ppb/fusion-gcn] seed=42 epoch 20/20 loss=0.1521 train_r2=0.9130 valid_r2=0.3748
+[ppb] Multimodal ChemBERTa+GCN seed=42 best_epoch=13 test R2=0.1481 RMSE=0.8961 (1372.7s)
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 50711.74it/s]
+[transformers] [1mRobertaModel LOAD REPORT[0m from: seyonec/ChemBERTa-zinc-base-v1
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+lm_head.dense.bias        | UNEXPECTED |  | 
+lm_head.layer_norm.bias   | UNEXPECTED |  | 
+lm_head.dense.weight      | UNEXPECTED |  | 
+lm_head.layer_norm.weight | UNEXPECTED |  | 
+lm_head.decoder.weight    | UNEXPECTED |  | 
+lm_head.decoder.bias      | UNEXPECTED |  | 
+lm_head.bias              | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[ppb] Multimodal ChemBERTa+GCN seed=43 n=1291/161/162 tasks=1 device=mps graph=3x128 drop=0.25
+  epochs 1-2: ChemBERTa frozen
+[ppb/fusion-gcn] seed=43 epoch 1/20 loss=0.8865 train_r2=0.1861 valid_r2=0.0873
+[ppb/fusion-gcn] seed=43 epoch 2/20 loss=0.7403 train_r2=0.2468 valid_r2=0.1849
+  epoch 3: ChemBERTa unfrozen (diff LR)
+[ppb/fusion-gcn] seed=43 epoch 3/20 loss=0.7311 train_r2=0.4571 valid_r2=0.3021
+[ppb/fusion-gcn] seed=43 epoch 4/20 loss=0.5929 train_r2=0.5243 valid_r2=0.3632
+[ppb/fusion-gcn] seed=43 epoch 5/20 loss=0.5262 train_r2=0.6653 valid_r2=0.4415
+[ppb/fusion-gcn] seed=43 epoch 6/20 loss=0.4498 train_r2=0.6989 valid_r2=0.4140
+[ppb/fusion-gcn] seed=43 epoch 7/20 loss=0.4036 train_r2=0.7106 valid_r2=0.3529
+[ppb/fusion-gcn] seed=43 epoch 8/20 loss=0.3345 train_r2=0.7791 valid_r2=0.3752
+[ppb/fusion-gcn] seed=43 epoch 9/20 loss=0.2955 train_r2=0.8302 valid_r2=0.4329
+[ppb/fusion-gcn] seed=43 epoch 10/20 loss=0.2683 train_r2=0.8496 valid_r2=0.3691
+[ppb/fusion-gcn] seed=43 epoch 11/20 loss=0.2432 train_r2=0.7149 valid_r2=0.3799
+[ppb/fusion-gcn] seed=43 epoch 12/20 loss=0.2080 train_r2=0.8654 valid_r2=0.4146
+[ppb/fusion-gcn] seed=43 epoch 13/20 loss=0.2178 train_r2=0.8798 valid_r2=0.4151
+[ppb/fusion-gcn] seed=43 epoch 14/20 loss=0.1896 train_r2=0.8440 valid_r2=0.3929
+[ppb/fusion-gcn] seed=43 epoch 15/20 loss=0.1844 train_r2=0.8660 valid_r2=0.4133
+[ppb/fusion-gcn] seed=43 epoch 16/20 loss=0.1637 train_r2=0.8381 valid_r2=0.3617
+[ppb/fusion-gcn] seed=43 epoch 17/20 loss=0.1611 train_r2=0.8936 valid_r2=0.3742
+[ppb/fusion-gcn] seed=43 epoch 18/20 loss=0.1626 train_r2=0.9122 valid_r2=0.3833
+[ppb/fusion-gcn] seed=43 epoch 19/20 loss=0.1563 train_r2=0.9127 valid_r2=0.3989
+[ppb/fusion-gcn] seed=43 epoch 20/20 loss=0.1484 train_r2=0.8918 valid_r2=0.4075
+[ppb] Multimodal ChemBERTa+GCN seed=43 best_epoch=5 test R2=0.3001 RMSE=0.8123 (1264.0s)
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 50386.44it/s]
+[transformers] [1mRobertaModel LOAD REPORT[0m from: seyonec/ChemBERTa-zinc-base-v1
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+lm_head.dense.bias        | UNEXPECTED |  | 
+lm_head.layer_norm.bias   | UNEXPECTED |  | 
+lm_head.dense.weight      | UNEXPECTED |  | 
+lm_head.layer_norm.weight | UNEXPECTED |  | 
+lm_head.decoder.weight    | UNEXPECTED |  | 
+lm_head.decoder.bias      | UNEXPECTED |  | 
+lm_head.bias              | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[ppb] Multimodal ChemBERTa+GCN seed=44 n=1291/161/162 tasks=1 device=mps graph=3x128 drop=0.25
+  epochs 1-2: ChemBERTa frozen
+[ppb/fusion-gcn] seed=44 epoch 1/20 loss=0.9057 train_r2=0.2924 valid_r2=0.2706
+[ppb/fusion-gcn] seed=44 epoch 2/20 loss=0.7706 train_r2=0.3047 valid_r2=0.3092
+  epoch 3: ChemBERTa unfrozen (diff LR)
+[ppb/fusion-gcn] seed=44 epoch 3/20 loss=0.7050 train_r2=0.5075 valid_r2=0.3656
+[ppb/fusion-gcn] seed=44 epoch 4/20 loss=0.5977 train_r2=0.5219 valid_r2=0.3990
+[ppb/fusion-gcn] seed=44 epoch 5/20 loss=0.5482 train_r2=0.6008 valid_r2=0.3671
+[ppb/fusion-gcn] seed=44 epoch 6/20 loss=0.4386 train_r2=0.7125 valid_r2=0.4379
+[ppb/fusion-gcn] seed=44 epoch 7/20 loss=0.3913 train_r2=0.7457 valid_r2=0.3864
+[ppb/fusion-gcn] seed=44 epoch 8/20 loss=0.3205 train_r2=0.7804 valid_r2=0.3706
+[ppb/fusion-gcn] seed=44 epoch 9/20 loss=0.2787 train_r2=0.8085 valid_r2=0.4154
+[ppb/fusion-gcn] seed=44 epoch 10/20 loss=0.2491 train_r2=0.8310 valid_r2=0.3870
+[ppb/fusion-gcn] seed=44 epoch 11/20 loss=0.2496 train_r2=0.8664 valid_r2=0.4116
+[ppb/fusion-gcn] seed=44 epoch 12/20 loss=0.2300 train_r2=0.8727 valid_r2=0.4218
+[ppb/fusion-gcn] seed=44 epoch 13/20 loss=0.2076 train_r2=0.8844 valid_r2=0.4214
+[ppb/fusion-gcn] seed=44 epoch 14/20 loss=0.2066 train_r2=0.8072 valid_r2=0.2990
+[ppb/fusion-gcn] seed=44 epoch 15/20 loss=0.1968 train_r2=0.8656 valid_r2=0.4526
+[ppb/fusion-gcn] seed=44 epoch 16/20 loss=0.1828 train_r2=0.8774 valid_r2=0.4236
+[ppb/fusion-gcn] seed=44 epoch 17/20 loss=0.1539 train_r2=0.8924 valid_r2=0.4111
+[ppb/fusion-gcn] seed=44 epoch 18/20 loss=0.1494 train_r2=0.8579 valid_r2=0.3420
+[ppb/fusion-gcn] seed=44 epoch 19/20 loss=0.1469 train_r2=0.9125 valid_r2=0.4018
+[ppb/fusion-gcn] seed=44 epoch 20/20 loss=0.1482 train_r2=0.8774 valid_r2=0.3414
+[ppb] Multimodal ChemBERTa+GCN seed=44 best_epoch=15 test R2=0.2440 RMSE=0.8442 (1259.8s)
+[2026-08-25 02:34:09] === fusion GCN done; compiling PPB_pivot ===
+PPB_pivot compiled
+  rows: 32
+  main models: ['ChemBERTa_zinc_base_v1_lr1e-05_e20', 'Multimodal_ChemBERTa_GCN_e20', 'Multimodal_ChemBERTa_GIN_e20', 'PyG_GAT_h128_e100', 'PyG_GCN_h128_e100', 'PyG_GIN_h128_e100', 'RandomForest_ECFP', 'XGBoost_ECFP']
+  still pending: ['Multimodal_ChemBERTa_GAT_e20']
+         label  n   r2_mean   r2_std  rmse_orig_mean
+ ChemBERTa+GCN  3  0.230716 0.076843       14.131753
+ ChemBERTa+GIN  3  0.204811 0.002446       14.379547
+           GAT  3  0.144795 0.043474       14.909124
+           GCN  3  0.144377 0.034299       14.913956
+     ChemBERTa  3  0.133244 0.048998       15.008669
+           GIN  3  0.048597 0.047692       15.725369
+XGBoost + ECFP  3 -0.043197 0.022557       16.469358
+     RF + ECFP  3 -0.088854 0.017271       16.826205
+Wrote /Users/pradyu/Documents/1_Work/2_Research/DeepChem_ML/Project_1/PPB_pivot
+[2026-08-25 02:34:10] === DONE ChemBERTa+GCN PPB ===

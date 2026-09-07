@@ -1,0 +1,14 @@
+flowchart TB
+  MOL["Molecular graph"] --> ATOM["Atom features\n~30-d per atom"]
+  ATOM --> GCN["GCN\n3 x 128"]
+  ATOM --> GIN["GIN\n3 x 128"]
+  ATOM --> GAT["GAT\n3 x 128, 4 heads"]
+  GCN --> P1["Mean pool 128-d"]
+  GIN --> P2["Mean pool 128-d"]
+  GAT --> P3["Mean pool 128-d"]
+  P1 --> CAT["Concatenate\n384-d"]
+  P2 --> CAT
+  P3 --> CAT
+  CAT --> H1["Dense 256 + ReLU"]
+  H1 --> H2["Dense 128 + ReLU"]
+  H2 --> OUT["PPB prediction\n1-d"]

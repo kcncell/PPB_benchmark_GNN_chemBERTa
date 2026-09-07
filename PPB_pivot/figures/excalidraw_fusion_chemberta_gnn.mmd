@@ -1,0 +1,14 @@
+flowchart TB
+  SMILES["SMILES string"] --> TOK["Tokenizer\nmax length 128"]
+  TOK --> CB["ChemBERTa encoder\n768-d hidden states"]
+  CB --> POOLT["Mean pool\nnon-pad tokens\n768-d"]
+
+  MOL["Molecular graph"] --> ATOM["Atom features\n~30-d per atom"]
+  ATOM --> GNN["GNN encoder\n3 layers x 128\nGIN or GCN or GAT"]
+  GNN --> POOLG["Global mean pool\n128-d"]
+
+  POOLT --> CAT["Concatenate\n896-d"]
+  POOLG --> CAT
+  CAT --> H1["Dense 256 + ReLU\ndropout 0.2"]
+  H1 --> H2["Dense 128 + ReLU\ndropout 0.2"]
+  H2 --> OUT["PPB prediction\n1-d"]

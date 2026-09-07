@@ -1,0 +1,35 @@
+# Project 1 conda environment
+# Created by cloning the existing `deepchem` env (hardlinks when possible),
+# then adding UQ / boosted-tree packages.
+#
+# Activate:
+#   conda activate dc
+#
+# Recreate from clone (preferred on low disk):
+#   conda create -n dc --clone deepchem
+#   conda activate dc
+#   pip install mapie xgboost
+#
+# Or install from freeze (heavier):
+#   pip install -r requirements_dc_freeze.txt
+
+name: dc
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  # Core scientific stack is already present via clone from `deepchem`.
+  # Key packages expected after setup:
+  #   deepchem 2.8.x
+  #   pytorch (MPS-capable)
+  #   torch-geometric
+  #   transformers + tokenizers
+  #   rdkit
+  #   scikit-learn, numpy, pandas, scipy, matplotlib, seaborn
+  #   mapie (conformal prediction)
+  #   xgboost
+  - pip:
+      - mapie
+      - xgboost

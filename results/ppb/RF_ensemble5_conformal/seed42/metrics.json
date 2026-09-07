@@ -1,0 +1,43 @@
+{
+  "dataset": "ppb",
+  "model": "RF_ensemble5_conformal",
+  "n_ensemble": 5,
+  "base_seed": 42,
+  "alpha": 0.1,
+  "target_coverage": 0.9,
+  "ensemble_mean": {
+    "train": {
+      "rmse": 0.3364469203810364,
+      "mae": 0.21073316508952614,
+      "r2": 0.8868034697661165
+    },
+    "valid": {
+      "rmse": 0.9914356927629774,
+      "mae": 0.719802529237761,
+      "r2": 0.17464404217972807
+    },
+    "test": {
+      "rmse": 1.0125948040157857,
+      "mae": 0.6953461007409033,
+      "r2": -0.08770447661486691
+    },
+    "mean_pred_std_test": 0.0497231377438155
+  },
+  "split_conformal": {
+    "picp": 0.9197530864197531,
+    "mpiw": 3.5227209832921167,
+    "q_hat": 1.761360491646058
+  },
+  "ensemble_std_intervals_z90": {
+    "picp": 0.08641975308641975,
+    "mpiw": 0.16357420623582988,
+    "z": 1.64485
+  },
+  "mapie": {
+    "error": "cannot import name 'MapieRegressor' from 'mapie.regression' (/Users/pradyu/opt/miniconda3/envs/dc/lib/python3.10/site-packages/mapie/regression/__init__.py)"
+  },
+  "train_time_sec": 15.76,
+  "task_index": 0,
+  "task_name": "exp",
+  "splitter": "scaffold"
+}

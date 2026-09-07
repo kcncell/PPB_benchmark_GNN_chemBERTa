@@ -1,0 +1,13 @@
+# Key packages reported in the manuscript (Python 3.10).
+# Full local dump: requirements_dc_freeze.txt (contains conda-local URLs
+# and may not pip-install on another machine).
+#
+# RDKit 2025.9.5 is best installed from conda-forge:
+#   conda install -c conda-forge rdkit=2025.9.5
+
+deepchem==2.8.0
+torch==2.10.0
+torch-geometric==2.8.0
+transformers==5.13.0
+scikit-learn==1.7.2
+xgboost==3.2.0

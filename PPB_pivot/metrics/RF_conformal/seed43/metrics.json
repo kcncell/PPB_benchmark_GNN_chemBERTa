@@ -1,0 +1,20 @@
+{
+  "dataset": "ppb",
+  "model": "RF_conformal",
+  "seed": 43,
+  "alpha": 0.1,
+  "target_coverage": 0.9,
+  "picp": 0.9197530864197531,
+  "mpiw": 3.4005256561424533,
+  "q_hat": 1.7002628280712264,
+  "test_point_metrics": {
+    "rmse": 1.0152766771367663,
+    "mae": 0.6997449188230566,
+    "r2": -0.09347371098362522
+  },
+  "train_r2": 0.8824978918919717,
+  "valid_r2": 0.17394000315569524,
+  "train_time_sec": 3.244,
+  "task_index": 0,
+  "task_name": "exp"
+}
