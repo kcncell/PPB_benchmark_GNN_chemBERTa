@@ -2,7 +2,7 @@
 
 Reproducible code, figures, leaderboards, and supplementary files for:
 
-**An Evaluation of Plasma Protein Binding Models under Scaffold Split: Fingerprints, ChemBERTa, Graph Networks, and Late Fusion**
+**Plasma Protein Binding Prediction under Scaffold Split: Tree Models, ChemBERTa, Graph Networks, and Late Fusion**
 
 Pradyumna Kumar Pradhan
 
