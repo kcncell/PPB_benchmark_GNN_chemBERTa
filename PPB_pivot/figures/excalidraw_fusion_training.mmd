@@ -1,4 +1,0 @@
-flowchart LR
-  E12["Epochs 1-2\nChemBERTa frozen\ntrain GNN + MLP only\nlr 1e-3"] --> E320["Epochs 3-20\nunfreeze ChemBERTa\ntext lr 1e-5\ngraph and head lr 1e-3"]
-  E320 --> SEL["Keep checkpoint\nwith best valid R2"]
-  SEL --> TEST["Score test set once"]
