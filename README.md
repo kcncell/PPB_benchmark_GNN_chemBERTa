@@ -14,7 +14,7 @@ https://github.com/kcncell/PPB_benchmark_GNN_chemBERTa
 scripts/     train, plot, and download
 shared/      data loaders, metrics, seeds
 results/     paper tables and per-seed metrics.json
-figures/     main-text Figures 1–5 and Supplementary Figures S1–S4
+figures/     main-text Figures 1–5 and Supplementary Figures 1–4
 environment.yml
 requirements_paper.txt
 requirements_dc_freeze.txt
@@ -75,10 +75,10 @@ Reported means are in `results/paper_table.csv`. Per-seed rows are in `results/l
 | Figure 3 | `figures/fig4_generalization_gap.pdf` |
 | Figure 4 | `figures/fig5_loss_curves_all.pdf` |
 | Figure 5 | `figures/fig7_delta_vs_rf.pdf` |
-| Supplementary Figure S1 | `figures/figS0_arch_standalone_gnn.pdf` |
-| Supplementary Figure S2 | `figures/figS1_arch_chemberta_gnn.pdf` |
-| Supplementary Figure S3 | `figures/figS3_arch_fusion_schedule.pdf` |
-| Supplementary Figure S4 | `figures/figS2_arch_triple_gnn.pdf` |
+| Supplementary Figure 1 | `figures/figS1_arch_standalone_gnn.pdf` |
+| Supplementary Figure 2 | `figures/figS2_arch_chemberta_gnn.pdf` |
+| Supplementary Figure 3 | `figures/figS3_arch_triple_gnn.pdf` |
+| Supplementary Figure 4 | `figures/figS4_arch_fusion_schedule.pdf` |
 
 ## License
 

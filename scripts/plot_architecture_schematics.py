@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 """Publication-quality architecture schematics for the PPB fusion models.
 
-Writes vector PDF and 300/600 dpi PNG.
+Writes vector PDF and 300 dpi PNG.
 
 Usage:
     conda activate dc
-    cd Project_1
     python scripts/plot_architecture_schematics.py
 """
 
@@ -19,8 +18,6 @@ from matplotlib.patches import FancyBboxPatch
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIRS = [
     ROOT / "figures",
-    ROOT / "docs" / "manuscript",
-    ROOT / "PPB_pivot" / "figures" / "architecture",
 ]
 
 BLUE = "#0072B2"
@@ -51,13 +48,10 @@ def _save(fig, stem: str):
         outdir.mkdir(parents=True, exist_ok=True)
         pdf = outdir / f"{stem}.pdf"
         png = outdir / f"{stem}.png"
-        png600 = outdir / f"{stem}_600dpi.png"
         fig.savefig(pdf, bbox_inches="tight", pad_inches=0.08, facecolor="white")
         fig.savefig(png, dpi=300, bbox_inches="tight", pad_inches=0.08, facecolor="white")
-        fig.savefig(png600, dpi=600, bbox_inches="tight", pad_inches=0.08, facecolor="white")
         print(f"Wrote {pdf}")
         print(f"Wrote {png}")
-        print(f"Wrote {png600}")
     plt.close(fig)
 
 
@@ -174,10 +168,10 @@ def plot_fusion():
     fy = footer(
         ax,
         out,
-        "Same head for ChemBERTa+GIN, ChemBERTa+GCN, and ChemBERTa+GAT.  ~44.5M parameters (mostly ChemBERTa).",
+        "Supplementary Figure 2. ChemBERTa+GNN. Same head for ChemBERTa+GIN, ChemBERTa+GCN, and ChemBERTa+GAT.  ~44.5M parameters (mostly ChemBERTa).",
     )
     finish_axes(ax, out, fy, top=y_top + 0.10)
-    _save(fig, "figS1_arch_chemberta_gnn")
+    _save(fig, "figS2_arch_chemberta_gnn")
 
 
 def plot_triple():
@@ -218,10 +212,10 @@ def plot_triple():
     fy = footer(
         ax,
         out,
-        "No ChemBERTa. Graph stacks match the standalone GCN, GIN, and GAT.  ~0.35M parameters.",
+        "Supplementary Figure 3. GCN+GIN+GAT. No ChemBERTa. Graph stacks match the standalone GCN, GIN, and GAT.  ~0.35M parameters.",
     )
     finish_axes(ax, out, fy, top=y_top + 0.08)
-    _save(fig, "figS2_arch_triple_gnn")
+    _save(fig, "figS3_arch_triple_gnn")
 
 
 def plot_schedule():
@@ -248,11 +242,11 @@ def plot_schedule():
     fy = footer(
         ax,
         boxes[0],
-        "Batch size 16. AdamW, weight decay 0.01, gradient clip 1.0. Same schedule for GIN, GCN, and GAT partners.",
+        "Supplementary Figure 4. ChemBERTa+GNN training schedule. Batch size 16. AdamW, weight decay 0.01, gradient clip 1.0. Same schedule for GIN, GCN, and GAT partners.",
         gap=0.08,
     )
     finish_axes(ax, boxes[0], fy, top=0.98)
-    _save(fig, "figS3_arch_fusion_schedule")
+    _save(fig, "figS4_arch_fusion_schedule")
 
 
 def plot_standalone_gnn():
@@ -279,10 +273,10 @@ def plot_standalone_gnn():
     fy = footer(
         ax,
         boxes[-1],
-        "GCN: degree-normalized mean.  GIN: sum then MLP.  GAT: 4 heads (concat, then mean on last layer).",
+        "Supplementary Figure 1. Standalone GNN (GCN, GIN, or GAT). GCN: degree-normalized mean.  GIN: sum then MLP.  GAT: 4 heads (concat, then mean on last layer).",
     )
     finish_axes(ax, boxes[-1], fy, top=y_top + 0.08)
-    _save(fig, "figS0_arch_standalone_gnn")
+    _save(fig, "figS1_arch_standalone_gnn")
 
 
 def main():
